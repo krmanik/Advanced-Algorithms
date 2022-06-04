@@ -32,7 +32,7 @@ class MinimumSpanningTreeTest {
         int vertices = 16;
 
         GenerateRandomGraph generateGraph = new GenerateRandomGraph(vertices);
-        generateGraph.generateGraph();
+        generateGraph.generateCompleteGraph();
         generateGraph.printGraph();
 
         MinimumSpanningTree minimumSpanningTree = new MinimumSpanningTree(generateGraph.getRandomGraph());

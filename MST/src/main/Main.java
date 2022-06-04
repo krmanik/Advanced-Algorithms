@@ -15,6 +15,7 @@ public class Main {
     static DefaultCategoryDataset datasetVertexTime = new DefaultCategoryDataset();
 
     public static void main(String[] args) {
+        // comment or uncomment below to run the functions
         // calculateTimeWeight();
         calculateTimeWeightNVertex(1024);
 
@@ -81,7 +82,7 @@ public class Main {
      */
     static void generateNVertexGraph(int n, int index) {
         GenerateRandomGraph generateGraph = new GenerateRandomGraph(n);
-        generateGraph.generateGraph();
+        generateGraph.generateCompleteGraph();
         // generateGraph.printGraph();
 
         MinimumSpanningTree minimumSpanningTree = new MinimumSpanningTree(generateGraph.getRandomGraph());

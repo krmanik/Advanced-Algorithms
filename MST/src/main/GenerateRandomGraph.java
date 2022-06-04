@@ -17,17 +17,12 @@ public class GenerateRandomGraph {
         randomGraph =  new Graph(vertices);
     }
 
-    public void generateGraph() {
-        for (int i = 0; i < maxEdge; i++) {
-            int src = random.nextInt(vertices);
-            int dst = random.nextInt(vertices);
-            float wgt = random.nextFloat();
-            // remove self loop and single edge
-            if (src == dst) {
-                // i = i - 1;
-                continue;
+    public void generateCompleteGraph() {
+        for (int i = 0; i < vertices; i++) {
+            for (int j = 1; j < vertices; j++) {
+                float wgt = random.nextFloat();
+                randomGraph.addEdge(i, j, wgt);
             }
-            randomGraph.addEdge(src, dst, wgt);
         }
     }
 

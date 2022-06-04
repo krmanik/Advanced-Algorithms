@@ -9,7 +9,7 @@ public class GenerateRandomGraphTest {
     void generateGraphTest() {
         int vertices = 16;
         GenerateRandomGraph generateRandomGraph = new GenerateRandomGraph(vertices);
-        generateRandomGraph.generateGraph();
+        generateRandomGraph.generateCompleteGraph();
         generateRandomGraph.printGraph();
 
         assertEquals(16, generateRandomGraph.getRandomGraph().getVertices());
